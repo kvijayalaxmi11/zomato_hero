@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato Hero Section</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .hero {
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Background Video */
+        .hero video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        /* Dark overlay */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.45);
+            z-index: 2;
+        }
+
+        /* Navigation */
+        nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 25px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 3;
+        }
+
+        .logo {
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 17px;
+        }
+
+        /* Hero Content */
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            z-index: 3;
+            width: 90%;
+        }
+
+        .content h1 {
+            font-size: 70px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 25px;
+            margin-bottom: 30px;
+        }
+
+        .search-box {
+            background: white;
+            width: 600px;
+            max-width: 100%;
+            margin: auto;
+            padding: 18px 25px;
+            border-radius: 10px;
+            color: #777;
+            font-size: 18px;
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                padding: 20px;
+            }
+
+            nav a {
+                margin-left: 10px;
+                font-size: 14px;
+            }
+
+            .content h1 {
+                font-size: 45px;
+            }
+
+            .content p {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="hero">
+
+        <!-- Background Video -->
+        <video autoplay muted loop playsinline>
+            <source src="https://b.zmtcdn.com/data/file_assets/2627bbed9d6c068e50d2aadcca11ddbb1743095810.mp4" type="video/mp4">
+        </video>
+
+        <!-- Overlay -->
+        <div class="overlay"></div>
+
+        <!-- Navigation -->
+        <nav>
+            <div class="logo">zomato</div>
+
+            <div>
+                <a href="#">Log in</a>
+                <a href="#">Sign up</a>
+            </div>
+        </nav>
+
+        <!-- Main Hero Content -->
+        <div class="content">
+            <h1>zomato</h1>
+
+            <p>Discover the best food & drinks in your city</p>
+
+            <div class="search-box">
+                📍 Search for restaurants, cuisines or dishes
+            </div>
+        </div>
+
+    </section>
+
+</body>
+</html>
